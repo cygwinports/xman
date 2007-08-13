@@ -1,4 +1,4 @@
 category: X11
-requires: cygwin libX11_6 libXaw8 libXprintUtil1
+requires: cygwin libX11_6 libXaw8 libXp6 libXprintUtil1 libXt6
 sdesc: "Xorg man page reader"
 ldesc: "Xorg man page reader"
