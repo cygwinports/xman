@@ -4,15 +4,18 @@ X.Org manpage reader
 
 Runtime requirements:
   cygwin-1.5.25-15
+  font-adobe-dpi100
+  font-bh-dpi100
+  groff-1.19.2-2
   libX11_6-1.1.5-1
-  libXaw7-1.0.4-2
+  libXaw7-1.0.5-1
   libXt6-1.0.5-1
-  man
+  man-1.6e-1
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
   binutils-20080624-2
   cygport-0.4.2-1
   gawk-3.1.6-1
@@ -56,7 +59,11 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 1.0.3-1 -----
+----- version 1.0.3-3 -----
+Updated to git master to fix app-defaults installation.
+Fixed handling of groff formatting and enabled man.conf support.
+
+----- version 1.0.3-2 -----
 Rebuilt.
 
 ----- version 1.0.3-1 -----

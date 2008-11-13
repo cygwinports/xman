@@ -1,0 +1,8 @@
+inherit xorg git
+
+PATCH_URI="1.0.3-cygwin-man.patch"
+
+CYGCONF_ARGS="
+	--with-manconfig=/usr/share/misc/man.conf
+	--with-sysmanpath=/usr/share/man:/usr/ssl/man:/usr/man:/usr/local/share/man:/usr/local/man
+"
