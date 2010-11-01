@@ -1,4 +1,4 @@
 category: X11
-requires: font-adobe-dpi75 font-bh-dpi75 libgcc1 libX11_6 libXaw7 libXt6 man
+requires: font-adobe-dpi75 font-bh-dpi75 libX11_6 libXaw7 libXt6 man
 sdesc: "X.Org man page reader"
 ldesc: "X.Org man page reader"
