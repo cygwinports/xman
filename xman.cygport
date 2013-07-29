@@ -1,0 +1,14 @@
+inherit xorg
+
+NAME="xman"
+VERSION=1.1.2
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="X man page viewer"
+DESCRIPTION="xman is a manual page browser for the X Window System."
+REQUIRES="font-adobe-dpi75 font-bh-dpi75 man"
+
+CYGCONF_ARGS="
+	--with-manconfig=/usr/share/misc/man.conf
+	--with-sysmanpath=/usr/share/man:/usr/ssl/man:/usr/man:/usr/local/share/man:/usr/local/man
+"
