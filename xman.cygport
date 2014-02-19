@@ -2,13 +2,24 @@ inherit xorg
 
 NAME="xman"
 VERSION=1.1.3
-RELEASE=1
-CATEGORY="X11"
+RELEASE=2
+CATEGORY="Utils"
 SUMMARY="X man page viewer"
 DESCRIPTION="xman is a manual page browser for the X Window System."
-REQUIRES="font-adobe-dpi75 font-bh-dpi75 man"
+SRC_URI+=" xman.xpm"
+PATCH_URI="1.1.3-cygwin-groff.patch"
+
+REQUIRES="font-adobe-dpi75 font-bh-dpi75 groff man"
 
 CYGCONF_ARGS="
 	--with-manconfig=/usr/share/misc/man.conf
 	--with-sysmanpath=/usr/share/man:/usr/ssl/man:/usr/man:/usr/local/share/man:/usr/local/man
 "
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	doicon ${S}/xman.xpm
+	make_desktop_entry xman "Xman" xman "Utility;Documentation"
+}

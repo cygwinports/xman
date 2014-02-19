@@ -1,0 +1,25 @@
+From ea0ecbfa007e03e29f80f976472a28e37cf59931 Mon Sep 17 00:00:00 2001
+From: Jon TURNEY <jon.turney@dronecode.org.uk>
+Date: Wed, 19 Feb 2014 14:51:34 +0000
+Subject: [PATCH app/xman] Use same FORMAT command on cygwin as on linux in HANDLE_ROFFSEQ case as well
+
+Signed-off-by: Jon TURNEY <jon.turney@dronecode.org.uk>
+---
+ vendor.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vendor.h b/vendor.h
+index 548ded6..06df38f 100644
+--- a/vendor.h
++++ b/vendor.h
+@@ -159,7 +159,7 @@ from the X Consortium.
+ # define REFER		"refer"
+ # if defined(CSRG_BASED)
+ #  define FORMAT	"nroff -mandoc"
+-# elif defined(linux)
++# elif defined(linux) || defined(__CYGWIN__)
+ #  define FORMAT	"GROFF_NO_SGR= groff -Tlatin1 -mandoc"
+ # elif defined(__DARWIN__)
+ #  define FORMAT	"nroff -man"
+--
+1.8.3.4 
